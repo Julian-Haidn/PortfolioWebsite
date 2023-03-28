@@ -1,0 +1,199 @@
+/* --- Menu --- */
+nav ul {
+  position: fixed;
+  z-index: 30;
+  
+  top:  calc(var(--project-border-top) - 1.7em);
+  left: var(--project-border-left);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+nav li {
+  position: relative;
+  bottom: 0;
+  display: inline-block;
+}
+
+nav li a {
+  display: block;
+  color: var(--color-black);
+  
+  font-family: 'Corbel', sans-serif;
+  font-weight: 300;
+  font-size: 1.7em;
+  
+  padding-right: 55px;
+  text-decoration: none;
+}
+
+
+/* --- Responsive Design --- */
+.projects {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--color-white);
+}
+
+
+/* --- Project Menu --- */
+.projects .project-menu {
+  position: absolute;
+  left: var(--project-border-left);
+  top:   var(--project-border-top);
+
+  height: calc(100% - (var(--project-border-top) + var(--project-border-bottom) + 7.8%));
+  width:  calc(var(--project-menu-width) - var(--project-border-left));
+  
+  background-color: rgba(0,0,0,0.05);
+}
+
+.projects .project-menu .project-menu-box{
+  position: absolute;
+  bottom:   0;
+  left:     0;
+  
+  
+  height: auto;
+  width: calc(100% - (var(--project-object-width)/2));
+}
+
+/* Project Menu Selection */
+.projects .project-menu .project-menu-box .menu-points{
+  position: absolute;
+  height: auto;
+  bottom: 0;
+  
+  border-right: 3px solid black;
+  padding-right: 15px;
+  
+  background-color: aqua;
+  
+}
+
+.projects .project-menu .project-menu-box .menu-points .menu-selection{
+  
+  width:  var(--project-menu-icon);
+  height: var(--project-menu-icon);
+  max-width:  10vh;
+  max-height: 10vh;
+  
+  background-color: red;
+  margin-top: 1vh;  
+}
+
+.selectedProjectType{
+  padding-right: 5px;
+  border-right: 1px solid black;
+}
+
+/* Content */
+.projects .project-menu .project-menu-box .menu-content{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  
+  width: calc(100% - var(--project-menu-box-width) - 1vw);
+  height: auto;
+}
+
+.projects .project-menu .project-menu-box .menu-content h2{
+  font-family: 'Corbel', sans-serif;
+  
+  font-weight: bold;
+  font-size: 4em;
+  white-space: nowrap;
+  
+  margin-bottom: 0.1em;
+}
+
+.projects .project-menu .project-menu-box .menu-content p{
+  font-family: 'Corbel', sans-serif;
+  font-weight: 300;
+  font-size:   1.6em;
+  font-size: clamp(0.8em, 2vw, 1.6em);
+  text-align:  justify;
+}
+
+
+
+
+
+/* --- 3D Object --- */
+
+.projects .project-object {
+  position: absolute;
+  z-index: 10;
+  
+  top:  var(--project-border-top);
+  left: var(--project-menu-width);
+  transform: translateX(-50%);
+  
+  width: var(--project-object-width);
+  height: calc(100% - (var(--project-border-top) + var(--project-border-bottom)));
+  
+  background-color: antiquewhite;
+  opacity: 0.4;
+}
+
+
+
+/* --- Content Selection --- */
+.projects .project-content {
+  position: absolute;
+  right: var(--project-border-right);
+  top:   var(--project-border-top);
+  
+  height: calc(100% - (var(--project-border-top) + var(--project-border-bottom)));
+  width:  calc(var(--project-selection-width) - var(--project-border-right));
+  
+  overflow-y: hidden;
+  background-color: var(--color-accent-one);
+}
+
+.projects .project-content h3, .projects .project-content p, .projects .project-content .project-selections{
+  margin-left: calc(var(--project-object-width)/2);
+  z-index: 0;
+}
+
+.projects .project-content h3{
+  font-family: 'Corbel', sans-serif;
+  font-weight: bold;
+  font-size: 4em;
+  margin-top: 30%;
+  transform: translateX(-0.7em);
+}
+
+.projects .project-content p{
+  font-family: 'Corbel', sans-serif;
+  font-weight: 300;
+  font-size:   1.7em;
+  margin-top:  -0.5em;
+}
+.projects .project-content .project-selections{
+  position: relative;
+  
+  top:    0;
+  bottom: 0;
+  width:  calc(100% - (var(--project-object-width)/2));
+  height: auto;
+  
+}
+.projects .project-content .p-selection{
+  left: 0;
+  
+  width: 85%;
+  
+  height: 1.4vh;
+  margin-top: 2.8vh;
+  
+  background-color: rgba(255,255,255,0.55);
+}
+
+
+
+
+

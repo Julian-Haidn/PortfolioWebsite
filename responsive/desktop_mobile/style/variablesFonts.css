@@ -1,0 +1,64 @@
+/* --- Variables --- */
+:root {
+  
+  /*
+  --project-border-top: 110px;
+  --project-border-right: 75px;
+  --project-border-bottom: 50px;
+  --project-border-left: 100px;
+  */
+  --project-border-top:    9.2%;
+  --project-border-right:  3.9%;
+  --project-border-bottom: 4.6%;
+  --project-border-left:   5.2%;
+  
+  --project-menu-width:   57%;
+  --project-menu-icon:    3.6vw;
+  --project-object-width: 35vw;
+  --project-selection-width: 43%;
+  
+  
+  --color-black: #404040;
+  --color-white: #F5F5F5;
+  --color-gray:  #9E9E9E;
+  
+  --color-accent-one:   #6CC4CC;
+  --color-accent-two:   #27B46E;
+  --color-accent-three: #6363E0;
+  --color-accent-four:  #CC4B4B;
+}
+
+/* --- Fonts --- */
+@font-face {
+    font-family: 'Corbel';
+    src: url('./fonts/Corbel-Normal.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Corbel';
+    src: url('./fonts/Corbel-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Corbel';
+    src: url('./fonts/Corbel-Light.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 300;
+}
+
+/* --- Setup --- */
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body{
+  position: relative;
+  width: 100%;
+  height:100%;
+}

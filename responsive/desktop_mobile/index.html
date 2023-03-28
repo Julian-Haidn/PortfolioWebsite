@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/variablesFonts.css" />
+    <link rel="stylesheet" href="style/styleProject.css" />
+    <link rel="stylesheet" href="style/styleProjectMobile.css" />
+  </head>
+  <body>
+    <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">About me</a></li>
+          <li><a href="#">Contact me</a></li>
+        </ul>
+      </nav>
+    
+    <section class="projects">
+      
+      <div class="project-menu">
+        <div class="project-menu-box">
+          <div class="menu-points">
+            <div class="menu-selection"></div>
+            <div class="menu-selection selectedProjectType"></div>
+            <div class="menu-selection"></div>
+            <div class="menu-selection"></div>
+          </div>
+          <div class="menu-content">
+            <h2>Grafik Design.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper </p>
+          </div>
+        </div>
+      </div>
+      <div class="project-object"></div>
+      <div class="project-content">
+        <h3>SPACE</h3>
+        <p>Nachvertonung</p>
+        <div class="project-selections">
+          <div class="p-selection"></div>
+          <div class="p-selection"></div>
+          <div class="p-selection"></div>
+          <div class="p-selection"></div>
+          <div class="p-selection"></div>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      Next section
+    </section>
+
+    <script>
+      const projectMenuBox = document.querySelector('.menu-points');
+      function updateProjectMenuBoxWidth() {
+        const projectMenuBoxWidth = projectMenuBox.getBoundingClientRect().width;
+        document.documentElement.style.setProperty('--project-menu-box-width', `${projectMenuBoxWidth}px`);
+      }
+
+      updateProjectMenuBoxWidth(); // call the function once on page load
+      window.addEventListener('resize', updateProjectMenuBoxWidth); // add the event listener
+    </script>
+    
+  </body>
+</html>

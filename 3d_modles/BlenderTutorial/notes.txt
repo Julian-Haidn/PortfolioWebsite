@@ -1,0 +1,6 @@
+Video all : 357 min
+          : 5,95 h
+
+with pause: 714 min
+          : 11 h
+
