@@ -1,7 +1,7 @@
 // Select all elements with the class "menu-selection"
 const projectSelections = document.querySelectorAll('.menu-selection');
 
-
+/*
  fetch('content/projectContent-german.json')
         .then(response => response.json())
         .then(data => {
@@ -10,7 +10,7 @@ const projectSelections = document.querySelectorAll('.menu-selection');
         .catch(error => {
           console.error('Error:', error);
         });
-
+*/
 
 
 
