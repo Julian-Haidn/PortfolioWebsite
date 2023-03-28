@@ -26,7 +26,7 @@
   --color-accent-two:   #27B46E;
   --color-accent-three: #6363E0;
   --color-accent-four:  #CC4B4B;
-  --color-accent-current: var(--color-accent-one);
+  --color-accent-current: var(--color-accent-two);
 }
 
 /* --- Fonts --- */

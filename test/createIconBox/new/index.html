@@ -22,11 +22,11 @@
       <div class="project-menu">
         <div class="project-menu-box">
           <div class="menu-points">
-            <div class="menu-selection">
+            <div class="menu-selection selectedProjectType" >
               <!-- icon 1 -->
               <svg><use xlink:href="#icon_design"></use></svg>
             </div>
-            <div class="menu-selection selectedProjectType">
+            <div class="menu-selection">
               <!-- icon 2 -->
               <svg><use xlink:href="#icon_music"></use></svg>
             </div>
@@ -162,16 +162,9 @@
               </svg>
     
     
-    
+    <script src="script/scriptProject.js"></script>
+    <script src="script/scriptSizeUpadates.js></script>
     <script>
-      const projectMenuBox = document.querySelector('.menu-points');
-      function updateProjectMenuBoxWidth() {
-        const projectMenuBoxWidth = projectMenuBox.getBoundingClientRect().width;
-        document.documentElement.style.setProperty('--project-menu-box-width', `${projectMenuBoxWidth}px`);
-      }
-
-      updateProjectMenuBoxWidth(); // call the function once on page load
-      window.addEventListener('resize', updateProjectMenuBoxWidth); // add the event listener
     </script>
     
   </body>

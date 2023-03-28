@@ -66,16 +66,14 @@ nav li a {
 
 /* Project Menu Selection */
 .projects .project-menu .project-menu-box .menu-points{
+  z-index: 30;
   position: absolute;
   height: auto;
   width: auto;
   bottom: 0;
   
-  border-right: 3px solid black;
+  border-right: 3px solid var(--color-accent-current);
   padding-right: 15px;
-  
-  background-color: aqua;
-  
 }
 
 .projects .project-menu .project-menu-box .menu-points .menu-selection{
@@ -85,8 +83,7 @@ nav li a {
   max-width:  10vh;
   max-height: 10vh;
   
-  background-color: red;
-  margin-top: 1vh;
+  margin-top: 1.2vh;
   cursor: pointer;
 }
 .projects .project-menu .project-menu-box .menu-points .menu-selection svg{
@@ -98,9 +95,8 @@ nav li a {
 
 /* selected Project */
 .projects .project-menu .project-menu-box .menu-points .menu-selection.selectedProjectType{
-  padding-right: 5px;
-  border-right: 1px solid black;
-  background-color: green;
+  padding-right: 6px;
+  border-right: 3px solid var(--color-accent-current);
   cursor: default;
 }
 .projects .project-menu .project-menu-box .menu-points .menu-selection.selectedProjectType svg{
@@ -140,8 +136,6 @@ nav li a {
 
 
 
-
-
 /* --- 3D Object --- */
 
 .projects .project-object {
@@ -156,7 +150,7 @@ nav li a {
   height: calc(100% - (var(--project-border-top) + var(--project-border-bottom)));
   
   background-color: antiquewhite;
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
 
@@ -171,7 +165,7 @@ nav li a {
   width:  calc(var(--project-selection-width) - var(--project-border-right));
   
   overflow-y: hidden;
-  background-color: var(--color-accent-one);
+  background-color: var(--color-accent-current);
 }
 
 .projects .project-content h3, .projects .project-content p, .projects .project-content .project-selections{

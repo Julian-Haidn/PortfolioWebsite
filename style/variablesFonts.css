@@ -22,11 +22,11 @@
   --color-white: #F5F5F5;
   --color-gray:  #9E9E9E;
   
-  --color-accent-one:   #6CC4CC;
-  --color-accent-two:   #27B46E;
-  --color-accent-three: #6363E0;
-  --color-accent-four:  #CC4B4B;
-  --color-accent-current: var(--color-accent-one);
+  --color-accent-0: #6CC4CC;
+  --color-accent-1: #27B46E;
+  --color-accent-2: #6363E0;
+  --color-accent-3: #CC4B4B;
+  --color-accent-current: var(--color-accent-0);
 }
 
 /* --- Fonts --- */

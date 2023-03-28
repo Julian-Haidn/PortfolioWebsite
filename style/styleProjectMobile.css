@@ -20,6 +20,7 @@
   }
   .projects .project-menu .project-menu-box .menu-points{
     bottom: 30%;
+    border: 0;
   }
   
   .projects .project-menu .project-menu-box .menu-points .menu-selection{
