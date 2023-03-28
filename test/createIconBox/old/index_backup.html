@@ -2,73 +2,21 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
     <link rel="stylesheet" href="style/variablesFonts.css" />
     <link rel="stylesheet" href="style/styleProject.css" />
     <link rel="stylesheet" href="style/styleProjectMobile.css" />
-    
+    <link rel="stylesheet" href="style/icons.css" />
   </head>
   <body>
-    <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">About me</a></li>
-          <li><a href="#">Contact me</a></li>
-        </ul>
-      </nav>    
     
     <section class="projects">
+      
       <div class="project-menu">
         <div class="project-menu-box">
-          <div class="menu-points">
-            <div class="menu-selection">
+          <ul class="menu-points">
+            <li class="selected-project">
               <!-- icon 1 -->
-              <svg><use xlink:href="#icon_design"></use></svg>
-            </div>
-            <div class="menu-selection selectedProjectType">
-              <!-- icon 2 -->
-              <svg><use xlink:href="#icon_music"></use></svg>
-            </div>
-            <div class="menu-selection">
-              <!-- icon 3 -->
-              <svg><use xlink:href="#icon_games"></use></svg>
-            </div>
-            <div class="menu-selection">
-              <!-- icon 4 -->
-              <svg><use xlink:href="#icon_coding"></use></svg>
-            </div>
-          </div>
-          <div class="menu-content">
-            <h2>Grafik Design.</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper </p>
-          </div>
-        </div>
-      </div>
-      <div class="project-object"></div>
-      <div class="project-content">
-        <h3>SPACE</h3>
-        <p>Nachvertonung</p>
-        <div class="project-selections">
-          <div class="p-selection"></div>
-          <div class="p-selection"></div>
-          <div class="p-selection"></div>
-          <div class="p-selection"></div>
-          <div class="p-selection"></div>
-        </div>
-      </div>
-    </section>
-    
-    <section>
-      Next section
-    </section>
-
-    
-    
-    
-    
-    <!-- SVG Icons -->
-    <svg display="none">
+              <svg display="none">
                 <symbol id="icon_design" viewBox="0 0 108 108">
                   <g>
                           <path class="st11" d="M32.3,87c-1.1-1.1-2.5-1.1-3.6,0c-0.4,0.4-0.8,0.9-1.2,1.3C17,73.9,16.7,52.9,26.9,38.8
@@ -103,7 +51,12 @@
                       </g>
                 </symbol>
               </svg>
-    <svg display="none">
+              <svg><use xlink:href="#icon_design"></use></svg>
+            </li>
+            
+            <li>
+              <!-- icon 2 -->
+              <svg display="none">
                 <symbol id="icon_music" viewBox="0 0 108 108">
                   <g>
                       <path class="st11" d="M106,0.8c0-0.4-0.4-0.8-0.9-0.7L35.8,17.6c-1.4,0.4-1.7,1.2-1.7,2.3l0,52.1c-3.1-2.3-6.4-3.6-9.8-4h-4.2
@@ -118,7 +71,12 @@
                   </g>
                 </symbol>
               </svg>
-    <svg display="none">
+              <svg><use xlink:href="#icon_music"></use></svg>
+            </li>
+            
+            <li>
+              <!-- icon 3 -->
+              <svg display="none">
                 <symbol id="icon_games" viewBox="0 0 108 108">
                   <g>
                       <path class="st11" d="M54.2,15.3c5.3,0,10.6,0,15.8,0c16.2,0.1,30.8,12.1,33.7,28c1.4,7.5,2.1,15.2,3.2,22.8
@@ -143,7 +101,12 @@
                   </g>
                 </symbol>
               </svg>
-    <svg display="none">
+              <svg><use xlink:href="#icon_games"></use></svg>
+            </li>
+            
+            <li>
+            <!-- icon 4 -->
+              <svg display="none">
                 <symbol id="icon_coding" viewBox="0 0 108 108">
                   <g>
                       <path class="st11" d="M108,54.8c-0.7,1-1.2,2-2,2.9c-7.8,8.4-15.7,16.7-23.6,25c-1.2,1.2-2.4,2-4.2,1.7
@@ -160,9 +123,22 @@
                   </g>
                 </symbol>
               </svg>
+              <svg><use xlink:href="#icon_coding"></use></svg>
+              
+            </li>
+          </ul>
+          <div class="menu-content">
+            <h2>Grafik Design.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper </p>
+          </div>
+        </div>
+      </div>
+    </section>
     
-    
-    
+    <section>
+      Next section
+    </section>
+
     <script>
       const projectMenuBox = document.querySelector('.menu-points');
       function updateProjectMenuBoxWidth() {

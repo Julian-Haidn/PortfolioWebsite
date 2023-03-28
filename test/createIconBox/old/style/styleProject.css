@@ -1,0 +1,107 @@
+/* --- Responsive Design --- */
+
+.projects {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-white);
+}
+
+
+
+
+
+/* --- Project Menu --- */
+.projects .project-menu {
+  z-index: 30;
+  position: absolute;
+  left: var(--project-border-left);
+  top:   var(--project-border-top);
+
+  height: calc(100% - (var(--project-border-top) + var(--project-border-bottom) + 7.8%));
+  width:  calc(var(--project-menu-width) - var(--project-border-left));
+}
+
+.projects .project-menu .project-menu-box{
+  position: absolute;
+  bottom:   0;
+  left:     0;
+  
+  height: auto;
+  width: calc(100% - (var(--project-object-width)/2));
+}
+
+
+
+/* Project Menu Selection */
+.projects .project-menu .project-menu-box .menu-points{
+  list-style: none;
+  position: absolute;
+  height: auto;
+  width: auto;
+  bottom: 0;
+  
+  border-right: 3px solid black;
+  padding-right: 15px;
+  
+}
+
+.projects .project-menu .project-menu-box .menu-points li{
+  list-style-type: none;
+  position: relative;
+  
+  width:  var(--project-menu-icon);
+  height: var(--project-menu-icon);
+  max-width:  10vh;
+  max-height: 10vh;
+  margin-top: 1vh;
+  
+}
+
+/* Icons */
+.projects .project-menu .project-menu-box .menu-points li svg{
+  height: 100%;
+  width:  100%;
+  fill:   var(--color-gray);
+  cursor: pointer;
+}
+
+/* Selected icon */
+.projects .project-menu .project-menu-box .menu-points li.selected-project{
+  padding-right: 5px;
+  border-right: 1px solid black;
+  cursor: default;
+}
+.selected-project svg{
+  fill: var(--color-accent-two);
+}
+
+
+
+/*  - Content - */
+.projects .project-menu .project-menu-box .menu-content{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  
+  width: calc(100% - var(--project-menu-box-width) - 1vw);
+  height: auto;
+}
+
+.projects .project-menu .project-menu-box .menu-content h2{
+  font-family: 'Corbel', sans-serif;
+  
+  font-weight: bold;
+  font-size: 4em;
+  white-space: nowrap;
+  
+  margin-bottom: 0.1em;
+}
+
+.projects .project-menu .project-menu-box .menu-content p{
+  font-family: 'Corbel', sans-serif;
+  font-weight: 300;
+  font-size:   1.6em;
+  font-size: clamp(0.8em, 2vw, 1.6em);
+  text-align:  justify;
+}

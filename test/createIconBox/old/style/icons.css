@@ -1,0 +1,17 @@
+.menu-selection-test{
+  position: relative;
+  height: 100px;
+  width:  100px;
+}
+.menu-selection-test svg{
+  fill:   gray;
+  width:  100%;
+  height: 100%;
+}
+
+/*
+.selectedProjectType-test svg{
+  fill: #009900;
+}
+
+*/
