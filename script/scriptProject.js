@@ -4,12 +4,14 @@ const menuContentH2 =     document.querySelector('.menu-content h2');
 const menuContentP =      document.querySelector('.menu-content p');
 const projectSelector =   document.querySelector('.project-selections');
 
+var projectCategory = 0;
 
 /** Loop through each selected element of div "project-selections"
 * by click change Project Type and Content
 */
 projectSelections.forEach((item, index) => {
     item.onclick = function() {
+        projectCategory = index;
       
       // update Frontend (highlight new Project Type)
         if (!item.classList.contains('selectedProjectType')) {
@@ -18,9 +20,10 @@ projectSelections.forEach((item, index) => {
             });
             item.classList.add('selectedProjectType');
         }
-      
         //update Content
         updateProject(index);
+        //update Text Project Content
+        updateProjectDescriptionVideo(index, 0);
     }
 });
 
@@ -31,9 +34,10 @@ projectSelections.forEach((item, index) => {
  * updates the Project Selection
  */
 function updateProject(index){
+  
   document.documentElement.style.setProperty('--color-accent-current', "var(--color-accent-" + index + ")");
   
-  menuContentH2.innerHTML = projectContentGer[index].category;
+  menuContentH2.textContent = projectContentGer[index].category;
   menuContentP .innerHTML = projectContentGer[index].description;
   
   
@@ -51,7 +55,7 @@ function updateProject(index){
     
   });
   updateSelectedProject(0);
-  mouseeventsProjectSelecter();
+  mouseEventsProjectSelecter();
 }
 
 
@@ -69,33 +73,50 @@ function updateSelectedProject(objectIndex){
 }
 
 
-/** Function mouseeventsProjectSelecter
+/** Function mouseEventsProjectSelecter
  * adds mouseover event to Project Seleter
  * adds click event to Project Seleter
  */
-function mouseeventsProjectSelecter(){
+function mouseEventsProjectSelecter(){
   Array.from(projectSelector.children).forEach((child, childIndex) => {
-    var x = 0;
+    var x = 0; //der aktuelle x Wert 
     
     //add mouseover
     child.addEventListener('mousemove', function (event) {
       let bnds = event.target.getBoundingClientRect();
       x =        event.clientX - bnds.left; // the value of x
       //update css Var
-      document.documentElement.style.setProperty('--cursor-selection', (x-5) + "px");
+      document.documentElement.style.setProperty('--cursor-selection', x + "px");
     });
     
     //add onClick
     child.addEventListener('mousedown', function (event) {
-      document.documentElement.style.setProperty('--cursor-current', (x-5) + "px");
+      document.documentElement.style.setProperty('--cursor-current', x + "px");
       updateSelectedProject(childIndex);
       
-      //set Video to this Position
+      // update Text and Video
+      updateProjectDescriptionVideo(projectCategory, childIndex);
     });
-    
     
   });
 
 }
+
+
+
+/** Function updateProjectDescription
+ * update Project Title
+ * update Project Description
+ * update Video (TODO)
+ */
+const projectTitle = document.querySelector('.project-content h3');
+const projectDescription = document.querySelector('.project-content p');
+function updateProjectDescriptionVideo(projectTypeIndex, projectIndex){
+  
+  projectTitle.innerHTML = projectContentGer[projectTypeIndex].projects[projectIndex].title;
+  projectDescription.innerHTML = projectContentGer[projectTypeIndex].projects[projectIndex].description;
+  
+}
+
 
 
