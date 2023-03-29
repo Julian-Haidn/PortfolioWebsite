@@ -1,24 +1,10 @@
 // Select all elements with the class "menu-selection"
 const projectSelections = document.querySelectorAll('.menu-selection');
 
-/*
- fetch('content/projectContent-german.json')
-        .then(response => response.json())
-        .then(data => {
-          // use the JSON data here
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
-*/
+const menuContentH2 = document.querySelector('.menu-content h2');
+const menuContentP = document.querySelector('.menu-content p');
+const projectSelector = document.querySelector('.project-selections');
 
-
-
-
-
-//console.log(data);
-//console.log(data[index].category);
-//console.log(data[index].description);
 
 // Loop through each selected element and change its text content
 projectSelections.forEach((item, index) => {
@@ -33,10 +19,34 @@ projectSelections.forEach((item, index) => {
         }
       
         //update Content
-        document.documentElement.style.setProperty('--color-accent-current', "var(--color-accent-" + index + ")");
-      
-      
-        
+        console.log("clicked: " + index);
+        updateProject(index);
       
     }
 });
+
+/** Function updateProject
+* updates the submenu of Project
+* updates the Content of the submenu
+* updates the Project Selection
+
+*/
+function updateProject(index){
+  document.documentElement.style.setProperty('--color-accent-current', "var(--color-accent-" + index + ")");
+  
+  menuContentH2.innerHTML = projectContentGer[index].category;
+  menuContentP .innerHTML = projectContentGer[index].description;
+  
+  
+  // Remove all existing divs inside projectSelector
+  while (projectSelector.firstChild) {
+    projectSelector.removeChild(projectSelector.firstChild);
+  }
+  // Loop through all Projects in Projecttype
+  projectContentGer[index].projects.forEach(prj => {
+
+      const newDiv = document.createElement('div');
+      newDiv.className = 'p-selection';
+      projectSelector.appendChild(newDiv);
+  });
+}
