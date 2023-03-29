@@ -1,12 +1,5 @@
 /* --- Variables --- */
 :root {
-  
-  /*
-  --project-border-top: 110px;
-  --project-border-right: 75px;
-  --project-border-bottom: 50px;
-  --project-border-left: 100px;
-  */
   --project-border-top:    9.2%;
   --project-border-right:  3.9%;
   --project-border-bottom: 4.6%;
@@ -27,6 +20,11 @@
   --color-accent-2: #6363E0;
   --color-accent-3: #CC4B4B;
   --color-accent-current: var(--color-accent-0);
+  
+  /* Project Selector Control */
+  --cursor-current:   20%;
+  --cursor-selection: 40%;
+  
 }
 
 /* --- Fonts --- */
@@ -57,9 +55,13 @@
   padding: 0;
   border: 0;
 }
+*:focus {
+  outline: none;
+}
 
 body{
   position: relative;
   width: 100%;
   height:100%;
+  box-sizing: border-box;
 }

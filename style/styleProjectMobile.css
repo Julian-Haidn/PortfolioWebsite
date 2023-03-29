@@ -61,6 +61,7 @@
   .projects .project-content {
     left: 0;
     margin-left: 50%;
+    z-index: 30;
     
     transform: translateX(-50%);
     top: 75%;

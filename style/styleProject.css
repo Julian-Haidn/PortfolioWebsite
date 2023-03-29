@@ -179,6 +179,7 @@ nav li a {
   font-size: 4em;
   margin-top: 30%;
   transform: translateX(-0.7em);
+  color: var(--color-white);
 }
 
 .projects .project-content p{
@@ -186,6 +187,7 @@ nav li a {
   font-weight: 300;
   font-size:   1.7em;
   margin-top:  -0.5em;
+  color: var(--color-white);
 }
 .projects .project-content .project-selections{
   position: relative;
@@ -196,13 +198,56 @@ nav li a {
   height: auto;
   
 }
+
+/* select Project*/
 .projects .project-content .p-selection{
+  position: relative
   left: 0;
   
   width: 85%;
   
-  height: 1.4vh;
-  margin-top: 2.8vh;
+  height: 1.5vh;
+  margin-top: 2.7vh;
   
-  background-color: rgba(255,255,255,0.55);
+  /*cursor: text;*/
+  cursor: e-resize;
+  background-color: rgba(255,255,255,0.25);
+  
+  border: none;
+}
+
+.projects .project-content .p-selection:hover{
+  background-color: rgba(255,255,255,0.45);
+}
+.projects .project-content .p-selection:active, .projects .project-content .p-selection.selectedProject:active {
+  background-color: rgba(255,255,255,0.75);
+}
+/* selected one */
+.projects .project-content .p-selection.selectedProject{
+  background-color: rgba(255,255,255,0.65);
+}
+
+/* cursor of selected Project */
+.projects .project-content .p-selection .cursor-current,
+.projects .project-content .p-selection .cursor-selection{
+  position: relative;
+  height: 150%;
+  top: -25%;
+  
+  width:0;
+  box-sizing: border-box;
+}
+
+
+.projects .project-content .p-selection.selectedProject .cursor-current{
+  left:   var(--cursor-current);
+  border-left: 4px solid var(--color-white);
+  
+}
+
+.projects .project-content .p-selection:hover .cursor-selection{
+  transform: translateY(-100%);
+  
+  left:   var(--cursor-selection);
+  border-left: 4px solid rgba(255,255,255,0.6);
 }
