@@ -35,7 +35,6 @@ nav li a {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-color: var(--color-white);
 }
 
 
@@ -165,7 +164,7 @@ nav li a {
   height: calc(100% - (var(--project-border-top) + var(--project-border-bottom)));
   width:  calc(var(--project-selection-width) - var(--project-border-right));
   
-  overflow-y: hidden;
+  overflow: none;
   background-color: var(--color-accent-current);
 }
 
@@ -181,6 +180,8 @@ nav li a {
   margin-top: 30%;
   transform: translateX(-0.7em);
   color: var(--color-white);
+	
+	white-space: nowrap;
 }
 .projects .project-content h3 a{
   color: var(--color-white);
@@ -194,7 +195,9 @@ nav li a {
   font-size:   1.7em;
   margin-top:  -0.5em;
   color: var(--color-white);
+	white-space: nowrap;
 }
+
 .projects .project-content .project-selections{
   position: relative;
   
@@ -202,8 +205,14 @@ nav li a {
   bottom: 0;
   width:  calc(100% - (var(--project-object-width)/2));
   height: auto;
-  
+	
+	
+	overflow-y: none;
+        /*-ms-overflow-style: none;
+        scrollbar-width: none;*/
+	
 }
+/*closed*/
 
 /* select Project*/
 .projects .project-content .p-selection{
@@ -211,7 +220,7 @@ nav li a {
   left: 0;
   
   width: 85%;
-  height: 1.5vh;
+  height: 1.7vh;
   margin-top: 2.7vh;
   
   /*cursor: none;*/

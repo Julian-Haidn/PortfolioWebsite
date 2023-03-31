@@ -34,8 +34,9 @@ projectSelections.forEach((item, index) => {
  * updates the Project Selection
  */
 function updateProject(index){
-  
+  //update colors
   document.documentElement.style.setProperty('--color-accent-current', "var(--color-accent-" + index + ")");
+	updateRgbColor("--color-accent-" + index);
   
   menuContentH2.textContent = projectContentGer[index].category;
   menuContentP .innerHTML = projectContentGer[index].description;
@@ -55,6 +56,7 @@ function updateProject(index){
     
   });
   updateSelectedProject(0);
+	
   mouseEventsProjectSelecter();
 }
 
@@ -79,29 +81,29 @@ function updateSelectedProject(objectIndex){
  */
 function mouseEventsProjectSelecter(){
   Array.from(projectSelector.children).forEach((child, childIndex) => {
-    var x = 0; //der aktuelle x Wert 
-    
+    var x = 0; //der aktuelle x Wert
     //add mouseover
     child.addEventListener('mousemove', function (event) {
       let bnds = event.target.getBoundingClientRect();
       x =        event.clientX - bnds.left; // the value of x
       //update css Var
       document.documentElement.style.setProperty('--cursor-selection', x + "px");
+			
     });
     
     //add onClick
     child.addEventListener('mousedown', function (event) {
-      document.documentElement.style.setProperty('--cursor-current', x + "px");
-      updateSelectedProject(childIndex);
-      
-      // update Text and Video
-      updateProjectDescriptionVideo(projectCategory, childIndex);
+			document.documentElement.style.setProperty('--cursor-current', x + "px");
+			updateSelectedProject(childIndex);
+
+			// update Text and Video
+			updateProjectDescriptionVideo(projectCategory, childIndex);
     });
+		
     
   });
 
 }
-
 
 
 /** Function updateProjectDescription
@@ -117,6 +119,4 @@ function updateProjectDescriptionVideo(projectTypeIndex, projectIndex){
   projectDescription.innerHTML = projectContentGer[projectTypeIndex].projects[projectIndex].description;
   
 }
-
-
 

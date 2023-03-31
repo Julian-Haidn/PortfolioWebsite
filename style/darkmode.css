@@ -1,0 +1,25 @@
+/* --- Standard --- */
+.darkmode{
+	background-color: var(--color-black);
+}
+.darkmode nav li a {
+	color: var(--color-white);
+}
+
+/* --- Startseite --- */
+
+
+
+
+
+
+/* --- Projects --- */
+.darkmode .projects .project-menu .project-menu-box .menu-content h2,
+.darkmode .projects .project-menu .project-menu-box .menu-content p{
+	color: var(--color-white);
+}
+
+.darkmode .projects .project-content {
+	border: 2px solid var(--color-accent-current);
+  background-color: rgba(var(--color-accent-current-rgb), 0.6);
+}

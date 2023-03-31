@@ -21,6 +21,7 @@
   .projects .project-menu .project-menu-box .menu-points{
     bottom: 30%;
     border: 0;
+		left: 5vw;
   }
   
   .projects .project-menu .project-menu-box .menu-points .menu-selection{
